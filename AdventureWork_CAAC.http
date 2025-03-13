@@ -1,0 +1,6 @@
+@AdventureWork_CAAC_HostAddress = http://localhost:5145
+
+GET {{AdventureWork_CAAC_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
