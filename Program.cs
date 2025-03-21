@@ -1,4 +1,5 @@
 using AdventureWork_CAAC.Data;
+using AdventureWork_CAAC.Interface;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -18,7 +19,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
         maxRetryDelay: TimeSpan.FromSeconds(30),
         errorNumbersToAdd: null);
     }));
-//builder.Services.AddScoped<ICustomerRepository, ICustomerRepository>();
+builder.Services.AddScoped<IProductModelRepository, ProductModelRepository>();
 
 var app = builder.Build();
 
